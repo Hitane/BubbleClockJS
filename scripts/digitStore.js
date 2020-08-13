@@ -74,6 +74,7 @@ class DigitStore {
         for (let i = 0; i < 2; i++) {
             for (let j = 0; j < 2; j++) {
                 let temp_dist = (nextPosition[j] - currentPosition[i]) % 12;
+                temp_dist = (temp_dist + 12) % 12; // corrects for the JavaScript modulo 'bug'
                 // if (temp_dist === 0) {
                 //     temp_dist = 12;   
                 // }
